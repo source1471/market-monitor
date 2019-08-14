@@ -1,8 +1,10 @@
-require('electron-reload')(__dirname)
+
 const {app, BrowserWindow, Menu} = require('electron')
 const path = require('path')
 const url = require('url')
 const shell = require('electron').shell
+
+require('electron-reload')(__dirname)
 
 let win
 
@@ -31,11 +33,11 @@ function createWindow () {
         submenu: [
             {label:'Adjust Notification Value'},
             {
-                label:'CoinMarketCap',
+                label:'Steam Market',
                 click(){
-                    shell.openExternal('http://coinmarketcap.com')//opens external marketplace
+                    shell.openExternal('https://steamcommunity.com/market/')//opens external marketplace
                 },
-                accelerator: 'CmdOrCtrl+Shift+C'//keyboard shortcut
+                accelerator: 'CmdOrCtrl+Shift+M'//keyboard shortcut
             },
             {type: 'separator'},//seperates menu items
             {
